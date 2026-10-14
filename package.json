@@ -1,0 +1,16 @@
+{
+  "name": "neon-breach-3d",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Neon Breach: dependency-free WebGL2 third-person action game prototype",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "test": "node --test tests/*.test.js",
+    "check": "npm run test && node --check src/main.js && node --check src/engine/graphics.js && node --check src/game/player.js && node --check src/game/world.js && npm run build:standalone && node --check dist/game.bundle.js",
+    "build:standalone": "node scripts/build-standalone.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
