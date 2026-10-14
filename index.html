@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050c17" />
+  <meta name="description" content="NEON BREACH: playable WebGL2 third-person sci-fi arena prototype." />
+  <title>NEON BREACH — M1 Movement Lab</title>
+  <link rel="stylesheet" href="./styles/game.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="viewport" tabindex="0" aria-label="Interactive WebGL 3D game canvas"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="hud-top">
+      <div class="brand"><span class="brand-marker"></span><div><div class="eyebrow">AETHER SYSTEMS / TEST FACILITY 07</div><div class="brand-main">NEON <strong>BREACH</strong></div></div></div>
+      <div class="mission"><span class="mission-label">PROTOCOL</span><span>M1 // MOVEMENT LAB</span><small>SIMULATION ONLINE</small></div>
+      <div class="stats"><span>FPS <strong id="fps">--</strong></span><span>POS <strong id="position">0 / 0 / 14</strong></span></div>
+    </div>
+    <div class="reticle" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <aside class="left-panel"><div class="panel-title">OPERATIVE TELEMETRY</div><div class="health-label">SUIT INTEGRITY <span>100%</span></div><div class="health-bar"><b></b></div><div class="shield-label">SHIELD CAPACITY <span>100%</span></div><div class="shield-bar"><b></b></div><div class="panel-divider"></div><div class="metric">TRAVERSED <strong id="distance">0 m</strong></div><div class="metric">STATUS <strong id="movement">IDLE</strong></div><div class="metric">CAMERA <strong id="camera-mode">FREE LOOK</strong></div></aside>
+    <aside class="right-panel"><div class="panel-title">MISSION BRIEF</div><h2>PERIMETER RECON</h2><p>Movement systems operational. Traverse the abandoned containment arena and test the mech's mobility envelope.</p><div class="obj"><span class="obj-square"></span><div>Explore the arena<small>ACTIVE OBJECTIVE</small></div></div><div class="future">COMBAT SYSTEMS // LOCKED UNTIL M3</div></aside>
+    <div class="bottom-left"><span class="pulse"></span> SYSTEMS NOMINAL <small>WEBGL2 / OFFLINE-READY</small></div>
+    <div id="hint" class="bottom-hint">WASD move · MOUSE look · SHIFT sprint · SPACE jump</div>
+    <div id="error" class="error" hidden></div>
+    <section class="welcome" id="welcome" aria-label="Start game"><div class="welcome-content"><div class="welcome-kicker"><span class="bracket">[</span> BOOT SEQUENCE COMPLETE <span class="bracket">]</span></div><h1>NEON<br/><em>BREACH</em></h1><p>ENTER THE CONTAINMENT ZONE</p><div class="meta"><span>BUILD 0.1.0</span><span>3D MOVEMENT PROTOTYPE</span><span>WEBGL2</span></div><button id="start-game" type="button">INITIALIZE MISSION <span>↗</span></button><div class="help">WASD — MOVE&nbsp;&nbsp;•&nbsp;&nbsp;MOUSE — LOOK&nbsp;&nbsp;•&nbsp;&nbsp;SHIFT — SPRINT&nbsp;&nbsp;•&nbsp;&nbsp;SPACE — JUMP</div></div></section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
